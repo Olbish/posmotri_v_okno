@@ -158,15 +158,6 @@ ol {
   outline: none;
 }
 
-/* Чекбокс */
-
-.search-form__pseudo-checkbox {
-  display: block;
-  border: 1px solid #fff;
-  width: 19px;
-  height: 19px;
-}
-
 .search-form__textfield:active {
   outline: 1px solid #fff;
 }
@@ -183,6 +174,15 @@ ol {
   outline: 1px solid #fff;
 }
 
+/* Чекбокс */
+
+.search-form__pseudo-checkbox {
+  display: block;
+  border: 1px solid #fff;
+  width: 19px;
+  height: 19px;
+}
+
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
   display: block;
@@ -192,7 +192,7 @@ ol {
   margin: 1px 0 0 1px;
 }
 
-/* Скролл */
+/* Форма с выбором контента */
 
 .content__list {
   position: relative;
@@ -220,6 +220,7 @@ ol {
 }
 
 /* Формат текста */
+
 .search-form__fieldset-title {
   font-weight: 400;
   font-size: 18px;
