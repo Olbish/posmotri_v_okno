@@ -71,7 +71,6 @@ ol {
   flex-direction: column;
   justify-content: flex-end;
   inline-size: 399px;
-  box-sizing: 534px;
   gap: 26px;
 }
 
@@ -82,7 +81,6 @@ ol {
 .result__video-container {
   position: relative;
   inline-size: 771px;
-  block-size: 386px;
   margin-bottom: 16px;
 }
 
