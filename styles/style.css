@@ -39,12 +39,6 @@ ol {
   white-space: nowrap;
 }
 
-/* Нужно чтобы скрыть скроллбар */
-
-.content__list::-webkit-scrollbar {
-  display: none;
-}
-
 /* Основные блоки с видео, .page перенесён с инит коммита для моего удобства */
 
 .page {
@@ -80,7 +74,7 @@ ol {
 
 .result__video-container {
   position: relative;
-  inline-size: 771px;
+  inline-size: 711px;
   block-size: 386px;
   margin-bottom: 16px;
 }
@@ -115,7 +109,7 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline 1px #fff;
   text-underline-offset: 1px;
 }
@@ -132,8 +126,8 @@ ol {
 
 .search-form__textfield {
   appearance: none;
-  width: 225px;
-  height: 27px;
+  min-width: 225px;
+  min-height: 27px;
   border-right: none;
   border-left: none;
   border-top: 1px solid #fff;
@@ -141,6 +135,10 @@ ol {
   background-color: transparent;
   padding-top: 2px;
   padding-bottom: 2px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: #fff;
 }
 
 .search-form__textfield::placeholder {
@@ -155,24 +153,9 @@ ol {
   outline: none;
 }
 
-.search-form__textfield:focus-visible {
-  outline: none;
-}
-
-.search-form__textfield:active {
-  outline: 1px solid #fff;
-}
-
-.search-form__textfield:focus {
-  outline: none;
-}
 
 .search-form__textfield:focus-visible {
   outline: none;
-}
-
-.search-form__textfield:hover {
-  outline: 1px solid #fff;
 }
 
 /* Чекбокс */
@@ -185,7 +168,7 @@ ol {
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
-  content: "";
+  content: '';
   display: block;
   background-color: #fff;
   width: 15px;
@@ -197,7 +180,7 @@ ol {
 
 .content__list {
   position: relative;
-  overflow: auto;
+  overflow-y: scroll;
   block-size: 298px;
 }
 
@@ -211,8 +194,10 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
+  min-width: 194px;
   height: 103px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container {
@@ -230,11 +215,25 @@ ol {
 
 .title {
   color: #fff;
-  font-family: Oswald, sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   line-height: 70.5px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.content__video-card-title {
+  padding: 2px 2px 5px;
+  color: #FFF;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-inline-size: 180px;
 }
 
 .content__accent {
@@ -247,6 +246,8 @@ ol {
   color: #fff;
   margin: 2px;
 }
+
+.content__card-link
 
 .content__card-link:active {
   background-color: #545050;
@@ -262,6 +263,10 @@ ol {
 
 .content__card-link:hover {
   text-decoration: underline 1px #fff;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__video-card-description {
